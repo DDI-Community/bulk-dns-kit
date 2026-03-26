@@ -34,7 +34,7 @@ pip install dnspython tqdm   # with optional progress bar
 ## Usage
 
 ```bash
-python dnsweep.py -d devices.txt -D domains.txt -s 192.168.1.1
+python script-v0.2.py -d devices.txt -D domains.txt -s 192.168.1.1
 ```
 
 ### Arguments
@@ -93,67 +93,67 @@ The script resolves every hostname × domain combination, e.g.:
 ### Basic A record resolution
 
 ```bash
-python dnsweep.py -d devices.txt -D domains.txt -s 10.0.0.1
+python script-v0.2.py -d devices.txt -D domains.txt -s 10.0.0.1
 ```
 
 ### Query AAAA (IPv6) records
 
 ```bash
-python dnsweep.py -d devices.txt -D domains.txt -s 10.0.0.1 -r AAAA
+python script-v0.2.py -d devices.txt -D domains.txt -s 10.0.0.1 -r AAAA
 ```
 
 ### Query SRV records
 
 ```bash
-python dnsweep.py -d devices.txt -D domains.txt -s 10.0.0.1 -r SRV
+python script-v0.2.py -d devices.txt -D domains.txt -s 10.0.0.1 -r SRV
 ```
 
 ### Save results to CSV
 
 ```bash
-python dnsweep.py -d devices.txt -D domains.txt -s 10.0.0.1 -o results.csv
+python script-v0.2.py -d devices.txt -D domains.txt -s 10.0.0.1 -o results.csv
 ```
 
 ### Save results to JSON
 
 ```bash
-python dnsweep.py -d devices.txt -D domains.txt -s 10.0.0.1 -o results.json
+python script-v0.2.py -d devices.txt -D domains.txt -s 10.0.0.1 -o results.json
 ```
 
 ### Show all query attempts including failures
 
 ```bash
-python dnsweep.py -d devices.txt -D domains.txt -s 10.0.0.1 --show-all
+python script-v0.2.py -d devices.txt -D domains.txt -s 10.0.0.1 --show-all
 ```
 
 ### Show only FOUND and TIMEOUT results
 
 ```bash
-python dnsweep.py -d devices.txt -D domains.txt -s 10.0.0.1 --show-all --filter FOUND,TIMEOUT
+python script-v0.2.py -d devices.txt -D domains.txt -s 10.0.0.1 --show-all --filter FOUND,TIMEOUT
 ```
 
 ### Quiet mode — summary only
 
 ```bash
-python dnsweep.py -d devices.txt -D domains.txt -s 10.0.0.1 -q
+python script-v0.2.py -d devices.txt -D domains.txt -s 10.0.0.1 -q
 ```
 
 ### Increase threads, set longer timeout, enable retries
 
 ```bash
-python dnsweep.py -d devices.txt -D domains.txt -s 10.0.0.1 -t 50 --timeout 5.0 --retries 3
+python script-v0.2.py -d devices.txt -D domains.txt -s 10.0.0.1 -t 50 --timeout 5.0 --retries 3
 ```
 
 ### Rate-limit to 100 queries per second
 
 ```bash
-python dnsweep.py -d devices.txt -D domains.txt -s 10.0.0.1 --rate-limit 100
+python script-v0.2.py -d devices.txt -D domains.txt -s 10.0.0.1 --rate-limit 100
 ```
 
 ### Prompt for DNS server interactively (omit `-s`)
 
 ```bash
-python dnsweep.py -d devices.txt -D domains.txt
+python script-v0.2.py -d devices.txt -D domains.txt
 # Enter DNS server to query: _
 ```
 
